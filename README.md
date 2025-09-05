@@ -1,7 +1,7 @@
-**bot run yml 👇🏻👇🏻**\n
+**bot run yml 👇🏻👇🏻** \n      🫂  
  ** 𝐀𝐃𝐌𝐈𝐍 𝐒𝐇𝐈𝐅𝐀𝐓 **
 ______________________
-    
+  ```bash   
 name: Node.js CI
 
 on:
@@ -9,21 +9,22 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
- strategy:
+    strategy:
       matrix:
         node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
- steps:
+    steps:
     # Step to check out the repository code
     - uses: actions/checkout@v2
 
-   # Step to set up the specified Node.js version
-  - name: Use Node.js ${{ matrix.node-version }}
+    # Step to set up the specified Node.js version
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
@@ -37,10 +38,7 @@ jobs:
       env:
         PORT: 8080
       run: npm start
-
-      
-
-
+```
 
 
 1. **build command**:
